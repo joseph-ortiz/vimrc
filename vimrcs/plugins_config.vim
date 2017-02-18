@@ -167,3 +167,19 @@ nnoremap <silent> <leader>l :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Typescript- VImj
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ let g:typescript_compiler_binary = 'tsc'
+ let g:typescript_compiler_options = ''
+ autocmd QuickFixCmdPost [^l]* nested cwindow
+ autocmd QuickFixCmdPost    l* nested lwindow
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-js-pretty-tepmlate for string syntax support 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ autocmd FileType typescript JsPreTmpl html
+ autocmd FileType typescript syn clear foldBraces

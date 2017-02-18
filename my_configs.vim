@@ -9,3 +9,8 @@ nnoremap <F4> :NumbersOnOff<CR>
 syntax enable
 colorscheme ir_black
 
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
